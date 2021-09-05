@@ -13,7 +13,7 @@ When brought back online:
 
 ---
 
-- [View deployed Heroku app here]()
+[View deployed Heroku app here]()
 - [Installation](#install)
 - [Usage](#usage)
 
