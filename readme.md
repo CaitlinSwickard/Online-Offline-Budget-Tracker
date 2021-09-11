@@ -13,7 +13,7 @@ When brought back online:
 
 ---
 
-[View deployed Heroku app here]()
+[View deployed Heroku app here](https://whispering-journey-57896.herokuapp.com/)
 - [Installation](#install)
 - [Usage](#usage)
 
