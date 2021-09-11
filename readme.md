@@ -44,7 +44,7 @@ Once all the packages have been installed, open terminal and run the following c
 node server.js
 ```
 
-This application runs on localhost:3000 open url to begin using Budget Tracker app.
+This application runs on localhost:3000 open url to begin using Budget Tracker app. If you want to clear the Budget tracker you can download RoboT3 and drop the database to start with a fresh version of the budget tracker.
 
 ## Built With
 
@@ -61,9 +61,9 @@ This application runs on localhost:3000 open url to begin using Budget Tracker a
 
 ## View
 
-![Shot-3]()
-![Shot-1]()
-![Shot-2]()
+
+![Shot-1](images/budget_tracker.png)
+![Shot-2](images/offline.png)
 
 ### Credits
 Frontend starting files provided © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

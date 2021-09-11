@@ -10,16 +10,6 @@ request.onupgradeneeded = ({ target }) => {
   }
 };
 
-// creating onsuccess
-request.onsuccess = ({ target }) => {
-  console.log(request.result.name);
-  db = target.result;
-  if (navigator.onLine) {
-    console.log('Backend online!');
-    checkDatabase();
-  }
-};
-
 // if error occurs
 request.onerror = (event) => {
   console.log(`Error - ${event.target.errorCode}`);
@@ -51,16 +41,26 @@ const checkDatabase = () => {
           // if return response not empty
           if (res.length !== 0) {
             // open another transaction
-            transaction = db.transaction(['budgetStore', 'readwrite']);
+            transaction = db.transaction(['budgetStore'], 'readwrite');
             const currentStore = transaction.objectStore('budgetStore');
             // clear existing entries for our bulk add
             currentStore.clear();
             console.log('Clearing store')
           }
-        })
+        });
     }
   };
 }
+
+// creating onsuccess
+request.onsuccess = ({ target }) => {
+  console.log(request.result.name);
+  db = target.result;
+  if (navigator.onLine) {
+    console.log('Backend online!');
+    checkDatabase();
+  }
+};
 
 const saveRecord = (record) => {
   console.log('Saving record');
